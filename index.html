@@ -6,14 +6,13 @@
 
 
     <meta charset="UTF-8">
-    <title>מחשבון משכנתא  </title>
+    <title>מחשבון משכנתא</title>
 
 
-  
 
 <h2>מחשבון היתכנות למשכנתא</h2>
 
-<f<form id="mortgageForm">
+<form id="mortgageForm">
   <label>הכנסה חודשית נטו (₪):</label>
   <input type="number" id="income" required="">
 
@@ -39,23 +38,23 @@
   <input type="number" id="years" required="">
 
   <label>מספר לווים:</label>
-  <select id="borrowerCount" onchange="toggleBorrowerFields()">
-    <option value="1">לווה 1</option>
-    <option value="2">2 לווים</option>
+  <select id="guarantorCount">
+    <option value="1" selected="">לווה אחד</option>
+    <option value="2">שני לווים</option>
   </select>
 
-  <div id="borrower1Section">
-    <label>לווה 1 - מין:</label>
-    <select id="gender1">
-      <option value="male">זכר</option>
-      <option value="female">נקבה</option>
-    </select>
+   <h4>פרטי הלווה הראשון</h4>
+  <label>לווה 1 - מין:</label>
+  <select id="gender1">
+    <option value="male">זכר</option>
+    <option value="female">נקבה</option>
+  </select>
 
-    <label>לווה 1 - גיל:</label>
-    <input type="number" id="age1" required="">
-  </div>
+  <label>לווה 1 - גיל:</label>
+  <input type="number" id="age1" min="18" max="100" required="">
 
-  <div id="borrower2Section">
+  <div id="secondGuarantorFields" style="display: none; margin-top: 10px;">
+    <h4>פרטי הלווה השני</h4>
     <label>לווה 2 - מין:</label>
     <select id="gender2">
       <option value="male">זכר</option>
@@ -63,13 +62,27 @@
     </select>
 
     <label>לווה 2 - גיל:</label>
-    <input type="number" id="age2">
+    <input type="number" id="age2" min="18" max="100">
   </div>
 
-  <button type="button" onclick="calculate()">חשב</button>
+ 
 
+  <br><br>
+
+  <button type="button" id="calculateBtn">חשב</button>
+  <button type="button" id="saveBtn">שמור תוצאה</button>
+  <button type="button" id="exportBtn">יצא תוצאה</button>
+  <button type="button" id="saveCalculationBtn">שמור נתונים</button>
+  <button type="button" id="loadCalculationBtn">טען נתונים </button>
+</form>
 
 <div class="result" id="result"></div>
 
+<!-- קישורי ספריות חיצוניות -->
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 
-</f<form><script src="./script.js"></script></body></html>
+<!-- כאן יוכנס הקוד ב-JS -->
+<script src="script.js"></script>
+
+
+<script src="./script.js"></script></body></html>

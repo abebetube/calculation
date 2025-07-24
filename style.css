@@ -1,4 +1,5 @@
- body {
+
+    body {
       font-family: Arial;
       max-width: 600px;
       margin: 0 auto;
@@ -50,7 +51,4 @@
     .error {
       color: red;
       font-weight: bold;
-    }
-    #borrower2Section {
-      display: none;
     }
