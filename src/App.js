@@ -1,6 +1,9 @@
 
 import React from "react";
-
+import EligibilityForm from "./components/EligibilityForm";
+import EligibilitySummary from "./components/EligibilitySummary";
+import TracksTable from "./components/TracksTable";
+import MixSummary from "./components/MixSummary";
 export default function MixSummary({
   summary,
   availablePayment,
